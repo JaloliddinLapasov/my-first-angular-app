@@ -1,0 +1,12 @@
+<form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+    <input formControlName="task" placeholder="Vazifa kiriting">
+    <p *ngIf="taskForm.get('task')?.touched && taskForm.get('task')?.invalid">
+      Vazifa majburiy va kamida 3 ta harfdan iborat bo‘lishi kerak!
+    </p>
+    <button type="submit" [disabled]="taskForm.invalid">Qo‘shish</button>
+  </form>
+  
+  <ul>
+    <li *ngFor="let task of tasks">{{ task }}</li>
+  </ul>
+  

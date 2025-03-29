@@ -1,0 +1,10 @@
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+    <label for="name">Ism:</label>
+    <input type="text" id="name" name="name" ngModel required>
+  
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" ngModel required>
+  
+    <button type="submit" [disabled]="userForm.invalid">Jo'natish</button>
+  </form>
+  
