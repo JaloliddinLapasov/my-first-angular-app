@@ -2,9 +2,6 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-tasks',
-  templateUrl: './tasks.component.html',
-  styleUrl: './tasks.component.scss',
   standalone: true,
   imports: [RouterModule],
   template: `
@@ -15,6 +12,4 @@ import { RouterModule } from '@angular/router';
     </ul>
   `
 })
-export class TasksComponent {
-
-}
+export class TasksComponent {}
