@@ -129,19 +129,63 @@
 
 
 // 6-dars
+// import { Component } from '@angular/core';
+// import { RouterModule } from '@angular/router';
+
+// @Component({
+//   standalone: true,
+//   imports: [RouterModule],
+//   selector: 'app-root',
+//   template: `
+//     <nav>
+//       <a routerLink="/">Home</a> |
+//       <a routerLink="/tasks">Tasks</a>
+//     </nav>
+//     <router-outlet></router-outlet>
+//   `
+// })
+// export class AppComponent {}
+
+// 7-dars
+// import { Component } from '@angular/core';
+// import { TaskComponent } from './components/task/task.component';
+
+// @Component({
+//   standalone: true,
+//   selector: 'app-root',
+//   imports: [TaskComponent],
+//   template: `
+//     <h1>My First Angular App</h1>
+//     <app-task></app-task>
+//   `
+// })
+// export class AppComponent {}
+
+
+// 8-dars
+// import { Component } from '@angular/core';
+// import { TaskListComponent } from './components/task-list/task-list.component';
+
+// @Component({
+//   standalone: true, // ✅ Standalone component
+//   selector: 'app-root',
+//   template: `<app-task-list></app-task-list>`, // ✅ To‘g‘ri ishlatilishi kerak
+//   imports: [TaskListComponent] // ✅ TaskListComponent imports ichida bo‘lishi kerak!
+// })
+// export class AppComponent {}
+
+
+// 9-dars
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { TaskListComponent } from './components/task-list/task-list.component';
 
 @Component({
-  standalone: true,
-  imports: [RouterModule],
   selector: 'app-root',
+  standalone: true,
+  imports: [TaskListComponent],
   template: `
-    <nav>
-      <a routerLink="/">Home</a> |
-      <a routerLink="/tasks">Tasks</a>
-    </nav>
-    <router-outlet></router-outlet>
+    <h1>My First Angular App</h1>
+    <app-task-list></app-task-list>
   `
 })
 export class AppComponent {}

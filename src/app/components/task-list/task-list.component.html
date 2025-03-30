@@ -1,0 +1,6 @@
+<input [(ngModel)]="query" placeholder="Filter tasks" />
+<ul>
+  @for (task of tasks | filterTasks: query; track task) {
+    <li>{{ task }}</li>
+  }
+</ul>
